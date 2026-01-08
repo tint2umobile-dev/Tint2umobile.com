@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TINT2U Mobile | St. Louis Mobile Window Tint</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --orange:#ff7a00;
+  --red:#ff2a2a;
+  --yellow:#ffd000;
+  --dark:#050508;
+  --glass:rgba(255,255,255,.10);
+  --border:rgba(255,255,255,.18);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  color:#fff;
+  background:#050508;
+  overflow-x:hidden;
+}
+
+/* STAR BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(1px 1px at 15% 20%, #fff, transparent),
+    radial-gradient(1px 1px at 40% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 10%, #fff, transparent);
+  opacity:.35;
+  z-index:-2;
+}
+
+/* LAUNCH BANNER */
+.launch-banner{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  padding:14px 20px;
+  text-align:center;
+  font-weight:800;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,var(--red),var(--orange));
+  color:#000;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:160px 8% 120px;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(to bottom, rgba(5,5,8,.55), rgba(5,5,8,.95)),
+    url("stl-arch.jpg") center/cover no-repeat;
+  z-index:-1;
+}
+
+.hero-content{
+  max-width:640px;
+}
+
+.hero h1{
+  font-family:Orbitron,sans-serif;
+  font-size:3.4rem;
+  line-height:1.1;
+}
+
+.hero p{
+  font-size:1.15rem;
+  opacity:.9;
+  margin:20px 0 32px;
+}
+
+.cta{
+  padding:18px 34px;
+  background:linear-gradient(90deg,var(--red),var(--orange));
+  color:#000;
+  border:none;
+  border-radius:16px;
+  font-weight:800;
+  letter-spacing:1.4px;
+  cursor:pointer;
+  box-shadow:0 20px 60px rgba(255,80,0,.35);
+}
+
+section{
+  padding:110px 8%;
+  max-width:1300px;
+  margin:auto;
+}
+
+.section-title{
+  font-family:Orbitron,sans-serif;
+  font-size:2.3rem;
+  color:var(--orange);
+  margin-bottom:50px;
+}
+
+/* GLASS CARD */
+.card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.15),
+    rgba(255,255,255,.05)
+  );
+  backdrop-filter:blur(18px);
+  border-radius:22px;
+  padding:36px;
+  border:1px solid var(--border);
+  box-shadow:0 40px 120px rgba(0,0,0,.65);
+  transition:.35s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 60px 160px rgba(0,0,0,.85);
+}
+
+/* HOW IT WORKS */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.step-number{
+  font-family:Orbitron,sans-serif;
+  font-size:3rem;
+  color:var(--orange);
+}
+
+.step h3{margin:12px 0 10px}
+
+/* BENEFITS */
+.benefits ul{
+  list-style:none;
+  padding:0;
+}
+
+.benefits li{
+  padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:16px;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  text-align:center;
+}
+
+th{
+  color:var(--orange);
+  font-family:Orbitron,sans-serif;
+}
+
+/* FORM */
+form{
+  display:grid;
+  gap:18px;
+}
+
+input,select{
+  padding:16px;
+  border-radius:14px;
+  border:none;
+  background:#0c0c14;
+  color:#fff;
+}
+
+.price-output{
+  font-family:Orbitron,sans-serif;
+  font-size:2.2rem;
+  color:var(--yellow);
+  text-align:center;
+}
+
+footer{
+  padding:60px;
+  text-align:center;
+  opacity:.75;
+}
+</style>
+</head>
+
+<body>
+
+<div class="launch-banner">
+  🚀 MOBILE INSTALLATIONS BEGIN MARCH — PRE-BOOK NOW 🚀
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Mobile Window Tinting<br>St. Louis</h1>
+    <p>High-performance window tint installed at your home or workplace.</p>
+    <button class="cta" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})">
+      Get Instant Quote
+    </button>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">How It Works</h2>
+  <div class="steps">
+    <div class="card step">
+      <div class="step-number">01</div>
+      <h3>Request a Quote</h3>
+      <p>Choose your vehicle and tint package to see instant pricing.</p>
+    </div>
+    <div class="card step">
+      <div class="step-number">02</div>
+      <h3>We Come To You</h3>
+      <p>Fully equipped mobile installation at your location.</p>
+    </div>
+    <div class="card step">
+      <div class="step-number">03</div>
+      <h3>Drive Away Protected</h3>
+      <p>Enjoy cooler temps, privacy, and UV protection.</p>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <h2 class="section-title">Why Tint Your Vehicle?</h2>
+  <div class="card">
+    <ul>
+      <li>☀️ Blocks up to 99% of UV rays</li>
+      <li>❄️ Reduces cabin heat</li>
+      <li>👁️ Enhances privacy</li>
+      <li>🛡️ Protects interior surfaces</li>
+      <li>🚘 Improves appearance & resale</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Film Comparison</h2>
+  <div class="card">
+    <table>
+      <tr>
+        <th>Feature</th><th>Dyed</th><th>Carbon</th><th>Ceramic</th>
+      </tr>
+      <tr><td>Heat Rejection</td><td>Low</td><td>Medium</td><td>Maximum</td></tr>
+      <tr><td>UV Protection</td><td>Good</td><td>Better</td><td>99%</td></tr>
+      <tr><td>Interior Protection</td><td>Basic</td><td>Advanced</td><td>Premium</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="quote">
+  <h2 class="section-title">Instant Quote</h2>
+  <div class="card">
+    <form id="quoteForm">
+      <input placeholder="Vehicle Year">
+      <input placeholder="Vehicle Make">
+      <input placeholder="Vehicle Model">
+
+      <select id="vehicle">
+        <option value="">Vehicle Type</option>
+        <option value="sedan">Sedan / Coupe</option>
+        <option value="suv">SUV / Truck</option>
+      </select>
+
+      <select id="tier">
+        <option value="">Tint Package</option>
+        <option value="dyed">Dyed</option>
+        <option value="carbon">Carbon</option>
+        <option value="ceramic">Ceramic</option>
+      </select>
+
+      <select id="windshield">
+        <option value="none">No Windshield</option>
+        <option value="ceramic">Ceramic Windshield</option>
+      </select>
+
+      <div class="price-output" id="price">$0</div>
+      <button class="cta">Request Quote</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2025 TINT2U Mobile — St. Louis
+</footer>
+
+<script>
+const prices={
+  sedan:{dyed:250,carbon:300,ceramic:500},
+  suv:{dyed:275,carbon:325,ceramic:550},
+  windshield:175
+};
+
+const form=document.getElementById("quoteForm");
+const priceOut=document.getElementById("price");
+
+function calc(){
+  const v=form.vehicle.value;
+  const t=form.tier.value;
+  const w=form.windshield.value;
+  if(!v||!t){priceOut.textContent="$0";return;}
+  let total=prices[v][t];
+  if(w==="ceramic") total+=prices.windshield;
+  priceOut.textContent="$"+total;
+}
+
+form.addEventListener("change",calc);
+</script>
+
+</body>
+</html>
